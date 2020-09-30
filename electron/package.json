@@ -1,0 +1,50 @@
+{
+  "name": "flutter_electron",
+  "version": "1.0.4",
+  "description": "A minimal Electron application with Flutter",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package-electron": "electron-builder"
+  },
+  "keywords": [
+    "Electron",
+    "quick",
+    "start",
+    "tutorial",
+    "demo",
+    "Flutter",
+    "desktop"
+  ],
+  "build": {
+    "appId": "com.example.flutterElectron",
+    "productName": "Image To PDF",
+    "asar": false,
+    "asarUnpack": [
+      "**/*.node"
+    ],
+    "mac": {
+      "category": "public.app-category.utilities"
+    },
+    "files": [
+      "main.js",
+      "node_modules/**/*",
+      "flutter_electrone.png"
+    ],
+    "extraResources": [
+      {
+        "from": "web/",
+        "to": "app/web",
+        "filter": [
+          "**/*"
+        ]
+      }
+    ]
+  },
+  "author": "ishangavidusha@gmail.com",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^10.1.0",
+    "electron-builder": "^21.2.0"
+  }
+}
